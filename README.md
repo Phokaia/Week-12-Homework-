@@ -6,7 +6,15 @@ The files in this repository were used to configure the network depicted below.
 
 ![image](https://user-images.githubusercontent.com/95952098/161176378-a13df2ab-ae1a-43e3-8dd6-2e3edfe30f4f.png)
 
-
+Security Rules for our network
+1.	Deny All Inbound. (Source=Any , Destination=Any)
+2.	Allow Azure Load Balancer Inbound. (Source=Azure Load Balancer, Destination=Any)
+3.	Allow Vnet Inbound. (Source=Virtual Network, Destination=Virtual Network)
+4.	Allow SSH from my IP (Source=24.146.47.227, Destination=10.0.0.4)
+5.	Allow SSH InBound To JumpBoxVN (Source=10.0.0.4, Destination=Virtual Network)
+6.	Allow Port 80 Inbound Public VirtualNet (Source=24.146.47.227,Destination= Virtual Network)
+7.	ELK IP Restrict (Source=24.146.47.227, Destination=10.1.0.5)
+8.	Allow SSH over Port 5601 to access KIBANA  from ELK Server
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
