@@ -21,7 +21,11 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   - [My Penetration Tester](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/7c75b0b88fefbdd5763553222341a914d976d5e9/Ansible/pentest.yml)
   - [Hosts](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/0b2d3415644d9c7e4a4918882aa519612459a59b/Ansible/ELK-Stack/hosts)
-This document contains the following details:
+
+
+
+
+ This document contains the following details:
 - Description of the Topologu
 - Access Policies
 - ELK Configuration
