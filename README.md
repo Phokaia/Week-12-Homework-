@@ -19,7 +19,7 @@ Security Rules for our network
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of YML AND CONFIG file may be used to install only certain pieces of it, such as Filebeat.
 
-  - https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/7c75b0b88fefbdd5763553222341a914d976d5e9/Ansible/pentest.yml
+  - ![My Penetration Tester](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/7c75b0b88fefbdd5763553222341a914d976d5e9/Ansible/pentest.yml)
 
 This document contains the following details:
 - Description of the Topologu
