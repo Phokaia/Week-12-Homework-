@@ -7,6 +7,7 @@ The files in this repository were used to configure the network depicted below.
 ![image](https://user-images.githubusercontent.com/95952098/161176378-a13df2ab-ae1a-43e3-8dd6-2e3edfe30f4f.png)
 
 __Security Rules for our network__
+
 __1.__	Deny All Inbound. (Source=Any , Destination=Any)
 
 __2.__	Allow Azure Load Balancer Inbound. (Source=Azure Load Balancer, Destination=Any)
