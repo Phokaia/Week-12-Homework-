@@ -8,12 +8,19 @@ The files in this repository were used to configure the network depicted below.
 
 __Security Rules for our network__
 __1.__	Deny All Inbound. (Source=Any , Destination=Any)
+
 __2.__	Allow Azure Load Balancer Inbound. (Source=Azure Load Balancer, Destination=Any)
+
 __3.__	Allow Vnet Inbound. (Source=Virtual Network, Destination=Virtual Network)
+
 __4.__	Allow SSH from my IP (Source=24.146.47.227, Destination=10.0.0.4)
+
 __5.__	Allow SSH InBound To JumpBoxVN (Source=10.0.0.4, Destination=Virtual Network)
+
 __6.__	Allow Port 80 Inbound Public VirtualNet (Source=24.146.47.227,Destination= Virtual Network)
+
 __7.__	ELK IP Restrict (Source=24.146.47.227, Destination=10.1.0.5)
+
 __8.__	Allow SSH over Port 5601 to access KIBANA  from ELK Server
 
 
