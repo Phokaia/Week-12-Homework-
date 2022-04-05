@@ -40,7 +40,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 
  This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -52,15 +52,23 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly __functional and available__, in addition to restricting __traffic__ to the network.
+- What aspect of security do load balancers protect? What is the advantage of a jump box?
+__Load balancers add resiliency by rerouting live traffic from one server to another server.
+  If the server falls prey to a DDoS attack or otherwise becomes unavailable.__
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __network__ and system __logs__.
+
+- What does Filebeat watch for?
+__Filebeat monitors the log files or locations that you specify, collects log events,
+  and forwards them either to Elasticsearch or Logstash for indexing.__
+
+- What does Metricbeat record?
+__Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify,
+  such as Elasticsearch or Logstash.__
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
