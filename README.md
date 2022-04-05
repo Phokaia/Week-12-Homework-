@@ -112,7 +112,7 @@ The playbook implements the following tasks:
 
 - __Specify a different group of machines__
 
-  ---yaml
+  ---
     -name: Config Web VM with Docker
      hosts: elk
      become: true
