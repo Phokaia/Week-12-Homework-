@@ -29,6 +29,12 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   - [My Penetration Tester](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/7c75b0b88fefbdd5763553222341a914d976d5e9/Ansible/pentest.yml)
   - [Hosts](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/0b2d3415644d9c7e4a4918882aa519612459a59b/Ansible/ELK-Stack/hosts)
+  - [Ansible Config](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/50e3b99ba20ef4897230a94de6993b49968d6eb3/Ansible/ELK-Stack/ansible.cfg)
+  - [ELK Installation](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/50e3b99ba20ef4897230a94de6993b49968d6eb3/Ansible/ELK-Stack/install-elk.yml)
+  - [Filebeat Config]
+  - [Filebeat Playbook](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/50e3b99ba20ef4897230a94de6993b49968d6eb3/Ansible/roles/filebeat-playbook.yml)
+  - [Metricbeat Config](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/50e3b99ba20ef4897230a94de6993b49968d6eb3/Ansible/files/metricbeat-config.yml)
+  - [Metricbeat Playbook](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/50e3b99ba20ef4897230a94de6993b49968d6eb3/Ansible/roles/metricbeat-playbook.yml)
 
 
 
