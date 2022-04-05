@@ -70,35 +70,42 @@ __Metricbeat takes the metrics and statistics that it collects and ships them to
 The configuration details of each machine may be found below.
 
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name     | Function     |        IP Address      | Operating System |
+|----------|--------------|------------------------|------------------|
+| Jump Box | Gateway      | 10.0.0.4/20.213.158.80 | Linux            |
+| WEB-1    | Linux Server | 10.0.0.5/24.146.47.227 | Linux            |
+| WEB-2    | Linux Server | 10.0.0.6/24.146.47.227 | Linux            |
+|ELK-Server| Linux server | 10.1.0.5/20.219.107.69 | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the __Jump-Box__ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- Add whitelisted IP addresses
+__Workstation my public IP through TCP 5601.
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by __Workstation and Jump-Box through SSH Jump-Box.
+- Which machine did you allow to access your ELK VM? What was its IP address?
+__I did allow to Jump-Box access my ELK VM via SSH port 22 and IP address was 20.213.158.80. It was static IP.__ 
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name     | Publicly Accessible | Allowed IP Addresses                      |
+|----------|---------------------|-------------------------------------------|
+| Jump-Box | Yes                 | 20.213.158.80 on SSH 22                   |
+| WEB-1    | No                  | 10.1.0.5 on SSH 22                        |
+| WEB-2    | No                  | 10.1.0.5 on SSH 22                        |
+|ELK-Server| No                  | Workstation my public IP through TCP 5601 |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- What is the main advantage of automating configuration with Ansible?
+
+__There are multiple advantages, Ansible lets you quickly and easily deploy multi layer applications throug a .YAML playbook.__
+__You don't need to write custom code to automate your systems.__
+__Ansible will also figure out how to get your systems to the state you want them to be in.__
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
