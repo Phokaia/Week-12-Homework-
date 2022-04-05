@@ -114,6 +114,7 @@ The playbook implements the following tasks:
   hosts: elk
   become: true
   tasks:
+  
 - __Install Docker.io__
 -name: docker.io
     apt:
@@ -121,6 +122,7 @@ The playbook implements the following tasks:
       update_cache: yes
       name: docker.io
       state: present
+      
 -__Install Python-pip__
 -name: Install pip3
     apt:
@@ -133,6 +135,7 @@ The playbook implements the following tasks:
     pip:
       name: docker
       state: present
+      
 -__Increase Virtual Memory__
 -name: Increase virtual memory
     command: sysctl -w vm.max_map_count=262144
@@ -144,6 +147,7 @@ The playbook implements the following tasks:
       value: 262144
       state: present
       reload: yes
+      
 -__Download and Launch ELK Docker Container (image sebp/elk)__
 -name: download and launch a docker elk container
     docker_container:
@@ -151,12 +155,14 @@ The playbook implements the following tasks:
       image: sebp/elk:761
       state: started
       restart_policy: always
+      
 -__Published ports 5044, 5601 and 9200 were made available__
 -#Please list the ports that ELK runs on
       published_ports:
        -  5601:5601
        -  9200:9200
        -  5044:5044
+       
 -__Enable service docker on boot__
 -name: Enable service docker on boot
     systemd:
