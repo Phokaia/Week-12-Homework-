@@ -231,6 +231,6 @@ __I have specified two separate groups in the etc/ansible/hosts file. One of the
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
-__http://Elk-Servers Public IP:5601/app/kibana  (http://52.172.29.17:5601/app/kibana)__
+ - http://Elk-Servers Public IP:5601/app/kibana  (http://52.172.29.17:5601/app/kibana)__
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
