@@ -73,8 +73,8 @@ The configuration details of each machine may be found below.
 | Name     | Function          |        IP Address      | Operating System |
 |----------|-------------------|------------------------|------------------|
 | Jump Box | Gateway           | 10.0.0.4/20.213.158.80 | Linux            |
-| WEB-1    | Linux Server      | 10.0.0.5/24.146.47.227 | Linux            |
-| WEB-2    | Linux Server      | 10.0.0.6/24.146.47.227 | Linux            |
+| WEB-1    | Web Application   | 10.0.0.5/24.146.47.227 | Linux            |
+| WEB-2    | Web Application   | 10.0.0.6/24.146.47.227 | Linux            |
 |ELK-Server| Monitoring Server | 10.1.0.5/20.219.107.69 | Linux            |
 
 ### Access Policies
@@ -216,9 +216,21 @@ SSH into the control node and follow the steps below:
 - Update the __CONFIG__ file to include __REMOTE USERS AND PORTS__
 - Run the playbook, and navigate to __HTTP://(ELK-Server Public Address)/app/kibana__ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+  _Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+
+__Install-elk.yml is the playbook. I copy it in /Week-13-ELK-Stack-Project/Ansible/ELK-Stack/__
+
+- _Which file do you update to make Ansible run the playbook on a specific machine?
+
+__/etc/ansible/hosts file__
+
+- _How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+
+__I have specified two separate groups in the etc/ansible/hosts file. One of the group will be webservers which has the IPs of the 2 Virtual machines that I will gonna install to Filebeat. The other group is named to ELK-Server which will have the Dynamic IP.I will also install ELK to Filebeat.__
+
 - _Which URL do you navigate to in order to check that the ELK server is running?
+
+__http://Elk-Servers Public IP:5601/app/kibana  (http://52.172.29.17:5601/app/kibana)__
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
