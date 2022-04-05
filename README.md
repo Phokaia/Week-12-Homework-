@@ -70,12 +70,12 @@ __Metricbeat takes the metrics and statistics that it collects and ships them to
 The configuration details of each machine may be found below.
 
 
-| Name     | Function     |        IP Address      | Operating System |
-|----------|--------------|------------------------|------------------|
-| Jump Box | Gateway      | 10.0.0.4/20.213.158.80 | Linux            |
-| WEB-1    | Linux Server | 10.0.0.5/24.146.47.227 | Linux            |
-| WEB-2    | Linux Server | 10.0.0.6/24.146.47.227 | Linux            |
-|ELK-Server| Linux server | 10.1.0.5/20.219.107.69 | Linux            |
+| Name     | Function          |        IP Address      | Operating System |
+|----------|-------------------|------------------------|------------------|
+| Jump Box | Gateway           | 10.0.0.4/20.213.158.80 | Linux            |
+| WEB-1    | Linux Server      | 10.0.0.5/24.146.47.227 | Linux            |
+| WEB-2    | Linux Server      | 10.0.0.6/24.146.47.227 | Linux            |
+|ELK-Server| Monitoring Server | 10.1.0.5/20.219.107.69 | Linux            |
 
 ### Access Policies
 
@@ -181,13 +181,28 @@ ELK-Server
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- List the IP addresses of the machines you are monitoring
+
+- Elk-Server: 10.1.0.5
+- WEB-1     : 10.0.0.5
+- WEB-2     : 10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Specify which Beats you successfully installed
+
+__Filebeat
+
+![image](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/1df1df0f487bd806ea483f1701aa71b15a7a58c6/Diagrams/elk.png)
+
+__Metricbeat
+
+![image](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/1df1df0f487bd806ea483f1701aa71b15a7a58c6/Diagrams/metricbeat%20system.png)
+
+![image](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/1df1df0f487bd806ea483f1701aa71b15a7a58c6/Diagrams/metricbeat.png)
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+- In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
