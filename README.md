@@ -110,14 +110,14 @@ __Ansible will also figure out how to get your systems to the state you want the
 The playbook implements the following tasks:
 - In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - __Specify a different group of machines__
----yaml
--name: Config Web VM with Docker
-  hosts: elk
-  become: true
-  tasks:
-  
----  
+  ---yaml
+    -name: Config Web VM with Docker
+     hosts: elk
+     become: true
+     tasks:
+  ---  
 - __Install Docker.io__
+
 -name: docker.io
     apt:
       force_apt_get: yes
