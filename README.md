@@ -110,62 +110,62 @@ __Ansible will also figure out how to get your systems to the state you want the
 The playbook implements the following tasks:
 - In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 
-- __Specify a different group of machines__
+- Specify a different group of machines:
+      ```yaml
+        - name: Config elk VM with Docker
+          hosts: elk
+          become: true
+          tasks:
+      ```
+  - Install Docker.io
+      ```yaml
+        - name: Install docker.io
+          apt:
+            update_cache: yes
+            force_apt_get: yes
+            name: docker.io
+            state: present
+      ``` 
+  - Install Python-pip
+      ```yaml
+        - name: Install python3-pip
+          apt:
+            force_apt_get: yes
+            name: python3-pip
+            state: present
 
-  ---
-    -name: Config Web VM with Docker
-     hosts: elk
-     become: true
-     tasks:
-  ---  
-- __Install Docker.io__
-
--name: docker.io
-    apt:
-      force_apt_get: yes
-      update_cache: yes
-      name: docker.io
-      state: present
-      
--__Install Python-pip__
-#-name: Install pip3
- #apt:
-   #force_apt_get: yes
-   #name: python3-pip
-   #state: present
-
-    
-#- name: Install Docker python module
-  #pip:
-  #name: docker
-  #state: present
-      
--__Increase Virtual Memory__
--name: Increase virtual memory
-    command: sysctl -w vm.max_map_count=262144
-
-    #Use sysctl module
-  - name: Use more memory
-    ansible.posix.sysctl:
-      name: vm.max_map_count
-      value: 262144
-      state: present
-      reload: yes
-      
--__Download and Launch ELK Docker Container (image sebp/elk)__
--name: download and launch a docker elk container
-    docker_container:
-      name: elk
-      image: sebp/elk:761
-      state: started
-      restart_policy: always
-      
--__Published ports 5044, 5601 and 9200 were made available__
--#Please list the ports that ELK runs on
-      published_ports:
-       -  5601:5601
-       -  9200:9200
-       -  5044:5044
+          # Use pip module (It will default to pip3)
+        - name: Install Docker module
+          pip:
+            name: docker
+            state: present
+            `docker`, which is the Docker Python pip module.
+      ``` 
+  - Increase Virtual Memory
+      ```yaml
+       - name: Use more memory
+         sysctl:
+           name: vm.max_map_count
+           value: '262144'
+           state: present
+           reload: yes
+      ```
+  - Download and Launch ELK Docker Container (image sebp/elk)
+      ```yaml
+       - name: Download and launch a docker elk container
+         docker_container:
+           name: elk
+           image: sebp/elk:761
+           state: started
+           restart_policy: always
+      ```
+  - Published ports 5044, 5601 and 9200 were made available
+      ```yaml
+           published_ports:
+             -  5601:5601
+             -  9200:9200
+             -  5044:5044   
+      ```
        
 -__Enable service docker on boot__
 -name: Enable service docker on boot
