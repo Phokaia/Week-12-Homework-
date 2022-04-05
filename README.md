@@ -177,7 +177,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ELK-Server
 ----------
-![image]https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/23a3d46a0a9896c8871ec06135e1c02b8622ec87/Diagrams/ELK-Server.png
+![image](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/23a3d46a0a9896c8871ec06135e1c02b8622ec87/Diagrams/ELK-Server.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
