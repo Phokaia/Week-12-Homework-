@@ -190,9 +190,11 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
 
+
 - __Filebeat__
 
 ![image](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/1df1df0f487bd806ea483f1701aa71b15a7a58c6/Diagrams/elk.png)
+
 
 - __Metricbeat__
 
@@ -204,13 +206,15 @@ These Beats allow us to collect the following information from each machine:
 
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
 
+__These can be log files (Filebeat), network data (Packetbeat), server metrics (Metricbeat), or any other type of data that can be collected by the growing number of Beats being developed by both Elastic and the community.__
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the __YML__ file to __ANSIBLE FOLDER__.
+- Update the __CONFIG__ file to include __REMOTE USERS AND PORTS__
+- Run the playbook, and navigate to __HTTP://<ELK-Server Public Address>/app/kibana__ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
