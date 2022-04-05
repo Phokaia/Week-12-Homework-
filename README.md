@@ -214,7 +214,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the __YML__ file to __ANSIBLE FOLDER__.
 - Update the __CONFIG__ file to include __REMOTE USERS AND PORTS__
-- Run the playbook, and navigate to __HTTP://<ELK-Server Public Address>/app/kibana__ to check that the installation worked as expected.
+- Run the playbook, and navigate to __HTTP://(ELK-Server Public Address)/app/kibana__ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
