@@ -190,11 +190,11 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
 
--__Filebeat__
+- __Filebeat__
 
 ![image](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/1df1df0f487bd806ea483f1701aa71b15a7a58c6/Diagrams/elk.png)
 
--__Metricbeat__
+- __Metricbeat__
 
 ![image](https://github.com/Phokaia/Week-13-ELK-Stack-Project/blob/1df1df0f487bd806ea483f1701aa71b15a7a58c6/Diagrams/metricbeat%20system.png)
 
