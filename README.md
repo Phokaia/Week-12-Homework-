@@ -206,7 +206,7 @@ These Beats allow us to collect the following information from each machine:
 
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
 
-__These can be log files (Filebeat), network data (Packetbeat), server metrics (Metricbeat), or any other type of data that can be collected by the growing number of Beats being developed by both Elastic and the community.__
+__These can be log files (Filebeat), network data (Packetbeat), server metrics (Metricbeat), or any other type of data that can be collected by the growing number of Beats being developed by both Elastic and the community. For example Filebeat can be installed on almost any operating system, including as a Docker container, and also comes with internal modules for specific platforms such as Apache, MySQL, Docker, MariaDB, Percona, Kafka and more.__
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
