@@ -108,9 +108,60 @@ __You don't need to write custom code to automate your systems.__
 __Ansible will also figure out how to get your systems to the state you want them to be in.__
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- __Specify a different group of machines__
+-name: Config Web VM with Docker
+  hosts: elk
+  become: true
+  tasks:
+- __Install Docker.io__
+-name: docker.io
+    apt:
+      force_apt_get: yes
+      update_cache: yes
+      name: docker.io
+      state: present
+-__Install Python-pip__
+-name: Install pip3
+    apt:
+      force_apt_get: yes
+      name: python3-pip
+      state: present
+
+    #Use pip module
+  - name: Install Docker python module
+    pip:
+      name: docker
+      state: present
+-__Increase Virtual Memory__
+-name: Increase virtual memory
+    command: sysctl -w vm.max_map_count=262144
+
+    #Use sysctl module
+  - name: Use more memory
+    ansible.posix.sysctl:
+      name: vm.max_map_count
+      value: 262144
+      state: present
+      reload: yes
+-__Download and Launch ELK Docker Container (image sebp/elk)__
+-name: download and launch a docker elk container
+    docker_container:
+      name: elk
+      image: sebp/elk:761
+      state: started
+      restart_policy: always
+-__Published ports 5044, 5601 and 9200 were made available__
+-#Please list the ports that ELK runs on
+      published_ports:
+       -  5601:5601
+       -  9200:9200
+       -  5044:5044
+-__Enable service docker on boot__
+-name: Enable service docker on boot
+    systemd:
+      name: docker
+      enabled: yes
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
