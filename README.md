@@ -124,17 +124,17 @@ The playbook implements the following tasks:
       state: present
       
 -__Install Python-pip__
-# name: Install pip3
-#    apt:
-#      force_apt_get: yes
-#      name: python3-pip
-#      state: present
+#-name: Install pip3
+ #apt:
+   #force_apt_get: yes
+   #name: python3-pip
+   #state: present
 
     
-  - name: Install Docker python module
-    pip:
-      name: docker
-      state: present
+#- name: Install Docker python module
+  #pip:
+  #name: docker
+  #state: present
       
 -__Increase Virtual Memory__
 -name: Increase virtual memory
